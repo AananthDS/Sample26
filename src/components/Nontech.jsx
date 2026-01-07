@@ -73,23 +73,23 @@ export default function WorkDetail({ workId, onClose }) {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     ],
     events: [
-      { letter: 'A', label: 'IPL AUCTION', image: 'https://images.unsplash.com/photo-1540575467063-178f50d1f6e7?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
-      { letter: 'B', label: 'CONNECTIONS', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
-      { letter: 'C', label: 'GRAB A MINUTE', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
-      { letter: 'D', label: 'GUESS THE LYRICS', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
-      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'https://images.unsplash.com/photo-1553884642-111c588e3db9?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true },
-      { letter: 'F', label: 'GUESS THE LYRICS', image: 'https://images.unsplash.com/photo-1516594547259-a339a6d38d5d?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true },
-      { letter: 'G', label: 'POSTER DESIGN', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true },
-      { letter: 'H', label: 'TREASURE HUNT', image: 'https://images.unsplash.com/photo-1546239891-730bZCodMFY?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true },
-      { letter: 'I', label: 'SQUID GAME RELAY', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true },
-      { letter: 'J', label: 'SCRIBBLE', image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&h=300&fit=crop', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], isRed: true }
+      { letter: 'A', label: 'IPL AUCTION',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'B', label: 'CONNECTIONS',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'C', label: 'GRAB A MINUTE',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'D', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'F', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'G', label: 'POSTER DESIGN',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'H', label: 'TREASURE HUNT',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'I', label: 'SQUID GAME RELAY',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] },
+      { letter: 'J', label: 'SCRIBBLE',             image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'] }
     ]
   }
 
   return (
     <div className="work-detail-page">
-      <button 
-        onClick={onClose} 
+      <button
+        onClick={onClose}
         className="close-button"
         aria-label="Close work detail"
       >✕ Close</button>
@@ -97,10 +97,10 @@ export default function WorkDetail({ workId, onClose }) {
       <section className="events-section">
         <div className="w-layout-blockcontainer container w-container">
           <h2 className="events-title">{work.title} EVENTS</h2>
-          
+
           <div className="events-grid">
             {work.events.map((event, i) => (
-              <div 
+              <div
                 key={i}
                 ref={el => cardRefs.current[i] = el}
                 className={`event-card ${visibleCards.has(i) ? 'visible' : ''} ${event.isRed ? 'red-event' : ''}`}
@@ -115,7 +115,7 @@ export default function WorkDetail({ workId, onClose }) {
                 <div className="event-content">
                   <h3 className="event-section-title">DESCRIPTION</h3>
                   <p className="event-description">{event.description}</p>
-                  
+
                   <h3 className="event-section-title">RULES</h3>
                   <ul className="event-rules">
                     {event.rules.map((rule, rIdx) => (

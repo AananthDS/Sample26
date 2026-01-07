@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection'
 import MetricsSection from './components/MetricsSection'
 import WorksSection from './components/WorksSection'
 import Footer from './components/Footer'
-import WorkDetail from './components/WorkDetail'
+import Nontech from './components/Nontech'
 import { initializeAnimations, addHoverAnimations, initScrollAnimations } from './utils/animations'
 
 export default function App(){
