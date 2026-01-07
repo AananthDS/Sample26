@@ -1,7 +1,7 @@
 import React from 'react'
 import SplineObject from './SplineObject'
 
-export default function WorksSection(){
+export default function WorksSection({onWorkClick}){
   const works = [
     {
       id: 'modern',
@@ -33,14 +33,26 @@ export default function WorksSection(){
           </div>
         </div>
       </section>
-
       <section className="section">
         <div className="w-layout-blockcontainer container w-container">
           <div className="w-dyn-list">
             <div role="list" className="works-block w-dyn-items">
               {works.map(work => (
                 <div key={work.id} role="listitem" className="works-wrapper w-dyn-item">
-                  <a href={`/works/${work.id}`} className="works-link-wrapper w-inline-block">
+                  <button
+                    onClick={() => onWorkClick?.(work.id)}
+                    className="works-link-wrapper w-inline-block"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      width: '100%',
+                      transition: 'transform 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  >
                     <div className="works-image-wrapper">
                       <img
                         src={work.image}
@@ -49,7 +61,7 @@ export default function WorksSection(){
                       />
                       <div className="works-cut-out"></div>
                     </div>
-                  </a>
+                  </button>
                 </div>
               ))}
             </div>
