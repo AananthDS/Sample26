@@ -1,9 +1,8 @@
 import { useEffect, useState, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './WorkDetail.css'
 
-export default function Nontech() {
-  const { id } = useParams()
+export default function Tech() {
   const navigate = useNavigate()
   const [visibleCards, setVisibleCards] = useState(new Set())
   const cardRefs = useRef([])
@@ -58,7 +57,7 @@ export default function Nontech() {
     }
   }, [])
   const work = {
-    title: 'NON - TECHNICAL',
+    title: 'TECHNICAL',
     category: 'Marketing',
     client: 'Mutil-Digital Capita',
     date: 'March 15, 2024',

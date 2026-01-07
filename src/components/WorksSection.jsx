@@ -1,19 +1,30 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import SplineObject from './SplineObject'
 
-export default function WorksSection({onWorkClick}){
+export default function WorksSection() {
+  const navigate = useNavigate()
+  
   const works = [
     {
-      id: 'modern',
+      id: 'nontech',
+      label: 'Non-Technical',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69e3/670279c5ed785cf3f5e8ae91_Works1.webp'
     },
     {
-      id: 'seasons',
+      id: 'tech',
+      label: 'Technical',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69e3/670279e81cd620f266f83dce_Works2.webp'
     },
     {
-      id: 'focus',
+      id: 'workshops',
+      label: 'Workshops',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69e3/670279f98647f3b8c72705df_Works3.webp'
+    },
+    {
+      id: 'onlineevents',
+      label: 'Online Events',
+      image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69e3/670279c5ed785cf3f5e8ae91_Works1.webp'
     }
   ]
 
@@ -40,7 +51,7 @@ export default function WorksSection({onWorkClick}){
               {works.map(work => (
                 <div key={work.id} role="listitem" className="works-wrapper w-dyn-item">
                   <button
-                    onClick={() => onWorkClick?.(work.id)}
+                    onClick={() => navigate(`/${work.id}`)}
                     className="works-link-wrapper w-inline-block"
                     style={{
                       background: 'none',
